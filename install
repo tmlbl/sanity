@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# This script will install the Sanity Linux distribution from a minimal Debian
+# netinstall.
+
+# Import utility functions
+source util.sh
+
+echo 'Installing base packages...'
+apt update && apt install -y $(cat ./packages)
+
+if [[ "$(ask_yes_no 'Would you like to reboot your machine now?' 0)" ]]; then
+  shutdown -r now
+fi
+
