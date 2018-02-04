@@ -44,6 +44,10 @@ var openbox = Package{
 			path:   "etc/xdg/openbox/rc.xml",
 			prefix: "/",
 		},
+		Config{
+			path:   "etc/xdg/openbox/autostart",
+			prefix: "/",
+		},
 	},
 }
 

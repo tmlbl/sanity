@@ -11,6 +11,11 @@ var corePackages = []string{
 	"git",
 
 	"chromium",
+
+	"redshift",
+	"nitrogen",
+	"htop",
+	"build-essential",
 }
 
 func main() {
