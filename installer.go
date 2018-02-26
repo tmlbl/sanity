@@ -16,6 +16,7 @@ var corePackages = []string{
 	"nitrogen",
 	"htop",
 	"build-essential",
+	"wicd",
 }
 
 func main() {
@@ -29,6 +30,7 @@ func main() {
 	lightDM.Install()
 	vim.Install()
 	lilyterm.Install()
+	tint2.Install()
 
 	// Finished. Ask the user if they'd like to reboot
 	if askYesNo("Would you like to reboot the machine now?", true) {

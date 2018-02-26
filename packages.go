@@ -70,3 +70,14 @@ var lilyterm = Package{
 		},
 	},
 }
+
+var tint2 = Package{
+	Installs: []string{"tint2"},
+	Configs: []Config{
+		Config{
+			path: "etc/xdg/tint2/tint2rc",
+			prefix: "/",
+		},
+	},
+}
+
