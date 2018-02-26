@@ -17,6 +17,8 @@ var corePackages = []string{
 	"htop",
 	"build-essential",
 	"wicd",
+	"pulseaudio",
+	"pulseaudio-dlna",
 }
 
 func main() {
@@ -31,6 +33,7 @@ func main() {
 	vim.Install()
 	lilyterm.Install()
 	tint2.Install()
+	albert.Install()
 
 	// Finished. Ask the user if they'd like to reboot
 	if askYesNo("Would you like to reboot the machine now?", true) {

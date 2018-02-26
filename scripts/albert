@@ -1,0 +1,11 @@
+#!/bin/bash
+
+wget -nv -O Release.key \
+  https://build.opensuse.org/projects/home:manuelschneid3r/public_key
+apt-key add - < Release.key
+apt-get update
+
+echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/Debian_9.0/ /' > /etc/apt/sources.list.d/albert.list 
+apt-get update
+apt-get install albert
+

@@ -14,10 +14,12 @@ type Config struct {
 type Package struct {
 	Installs []string // Apt package names to be installed
 	Configs  []Config // Paths to configs to be added
+	Script   string   // Script file to be run
 }
 
 // Install performs all installation steps for the Package
 func (p *Package) Install() {
+	runCmd("bash", p.Script)
 	aptInstall(p.Installs...)
 	for _, c := range p.Configs {
 		err := copyOver(c.path, filepath.Join(c.prefix, c.path), false)
@@ -79,5 +81,10 @@ var tint2 = Package{
 			prefix: "/",
 		},
 	},
+}
+
+var albert = Package{
+	Installs: []string{"albert"},
+	Script: "scripts/albert",
 }
 
